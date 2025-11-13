@@ -159,7 +159,7 @@ export default function Home() {
             <input 
                 type="file" 
                 accept="image/*" 
-                capture="environment" // SỬA: "camera" -> "environment" (để mở camera sau)
+                
                 onChange={handleFileChange}
                 className={styles.fileInput}
             />
