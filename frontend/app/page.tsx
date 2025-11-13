@@ -68,7 +68,9 @@ export default function Home() {
 
         try {
             // Gọi đến backend FastAPI (đang chạy trên port 8000)
-            const response = await fetch("http://127.0.0.1:8000/detect", {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
+            const response = await fetch(`${apiUrl}/detect`, {
                 method: "POST",
                 body: formData,
             });
